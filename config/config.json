@@ -2,5 +2,5 @@
   "prefix": "YOUR_PREFIX",
   "token": "YOUR_TOKEN",
   "commands_path": "./commands",
-  "lang": "de"
+  "lang": "en"
 }
