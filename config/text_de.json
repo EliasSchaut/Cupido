@@ -1,0 +1,9 @@
+{
+  "index": {
+    "guild_only": "Ich kann diesen Befehl leider nur in Servern ausführen!",
+    "dm_only": "Ich kann diesen Befehl leider nur im privaten Chat mit dir ausführen!\nFalls du ausversehen gerade eine Lösung geschickt hast, lösche diese bitte unverzüglich, um andere nicht zu spoilern!",
+    "missing_args": "Du hast keine Argummente abgegeben",
+    "missing_args_proper_use": "Die korrekte Verwendung wäre: ",
+    "error": "Es gab einen Fehler beim Versuch, diesen Befehl auszuführen!"
+  }
+}
