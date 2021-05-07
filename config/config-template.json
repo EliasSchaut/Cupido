@@ -2,5 +2,6 @@
   "prefix": "YOUR_PREFIX",
   "token": "YOUR_TOKEN",
   "commands_path": "./commands",
-  "lang": "en"
+  "lang": "en",
+  "admin_ids": [ "501805867369496576" ]
 }
