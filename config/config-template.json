@@ -3,5 +3,5 @@
   "token": "YOUR_TOKEN",
   "commands_path": "./commands",
   "lang": "en",
-  "admin_ids": [ "501805867369496576" ]
+  "admin_ids": [ ]
 }
