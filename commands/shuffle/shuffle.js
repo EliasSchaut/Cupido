@@ -4,6 +4,7 @@ module.exports = {
     aliases: ['start', 'run'],
     args: true,
     usage: '[???]',
+    args_min_length: 1,
     guildOnly: true,
     dmOnly: false,
     restricted: true,

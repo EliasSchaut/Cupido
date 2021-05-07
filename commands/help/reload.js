@@ -5,6 +5,7 @@ module.exports = {
     description: 'Reloads a command',
     aliases: ['reloads', 'r'],
     args: true,
+    args_min_length: 1,
     usage: '[command name]',
     guildOnly: false,
     dmOnly: false,

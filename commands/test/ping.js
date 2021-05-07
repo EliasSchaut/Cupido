@@ -3,7 +3,6 @@ module.exports = {
     description: 'Get the bot\'s ping',
     aliases: ['p'],
     args: false,
-    usage: '',
     guildOnly: false,
     dmOnly: false,
     execute(message, args) {

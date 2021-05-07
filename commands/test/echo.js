@@ -4,6 +4,7 @@ module.exports = {
     aliases: ['echos'],
     args: true,
     usage: '[text]',
+    args_min_length: 1,
     guildOnly: false,
     dmOnly: false,
     execute(message, args) {
