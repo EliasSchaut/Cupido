@@ -1,3 +1,5 @@
+let ids = require("../../js/id_safe").ids
+
 module.exports = {
     name: 'destroy',
     description: 'Destruct all channels',
@@ -6,7 +8,23 @@ module.exports = {
     guildOnly: true,
     dmOnly: false,
     restricted: true,
-    execute(message, args) {
+    async execute(message, args) {
+        if (!ids.initiated) {
+            return message.channels
+        }
 
+        for (const id in ids.shuffle_ids) {
+            const channel = message.guild.channels.cache.get(id);
+            await channel.delete();
+        }
+
+        const lobby = message.guild.channels.cache.get(ids.lobby);
+        await lobby.delete();
+
+        const category = message.guild.channels.cache.get(ids.category);
+        await category.delete();
+
+        ids.initiated = false;
+        message.channel.send("Channels successfully destroyed")
     },
 };

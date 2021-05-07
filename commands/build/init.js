@@ -31,5 +31,7 @@ module.exports = {
         ids.category = cat.id;
         ids.lobby = lobby.id;
         ids.initiated = true;
+
+        message.channel.send("Channels successfully initialised")
     },
 };
