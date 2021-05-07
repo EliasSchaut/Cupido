@@ -56,6 +56,14 @@ client.on('message', message => {
         return message.reply(text.dm_only);
     }
 
+    // restricted
+    if (command.restricted) {
+        if (!config.admin_ids.includes(message.author.id)) {
+            return message.reply(text.restricted);
+        }
+
+    }
+
     // check missing args
     if (command.args && !args.length) {
         let reply = text.missing_args + `, ${message.author}!`;

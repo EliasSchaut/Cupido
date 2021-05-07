@@ -6,6 +6,7 @@ module.exports = {
     usage: '',
     guildOnly: true,
     dmOnly: false,
+    restricted: true,
     execute(message, args) {
 
     },

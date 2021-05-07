@@ -1,7 +1,8 @@
 {
   "index": {
     "guild_only": "I can't execute that command inside DMs!",
-    "dm_only": "I can't execute that command inside guilds! Please send me that command private\nIf you send a solution, please delete it immediately, so other people don't see it!",
+    "dm_only": "I can't execute that command inside guilds! Please send me that command private",
+    "restricted": "Unfortunately, you are not authorised to execute this command!",
     "missing_args": "You didn't provide any arguments ",
     "missing_args_proper_use": "The proper usage would be: ",
     "error": "There was an error trying to execute that command! Ask the holy Ilias for help!"

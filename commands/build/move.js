@@ -6,6 +6,7 @@ module.exports = {
     usage: '[from channel_id] [to channel_id]',
     guildOnly: true,
     dmOnly: false,
+    restricted: true,
     execute(message, args) {
 
     },

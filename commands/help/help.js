@@ -1,5 +1,4 @@
-const { prefix, lang } = require('../../config/config.json');
-const text = require(`../../config/text_${lang}.json`).commands.help;
+const { prefix } = require('../../config/config.json');
 
 module.exports = {
     name: 'help',
