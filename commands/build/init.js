@@ -1,4 +1,5 @@
 const { category_name, lobby_name } = require("../../config/config.json").init
+let ids = require("../../js/id_safe").ids;
 
 module.exports = {
     name: 'init',
@@ -8,8 +9,8 @@ module.exports = {
     guildOnly: true,
     dmOnly: false,
     restricted: true,
-    execute(message, args) {
-        message.guild.channels.create(category_name, {
+    async execute(message, args) {
+        const cat = await message.guild.channels.create(category_name, {
             type: 'category',
             position: 1,
             permissionOverwrites: [
@@ -17,16 +18,18 @@ module.exports = {
                     id: message.guild.id,
                     allow: ['VIEW_CHANNEL'],
                 }]
-        }).then(cat => {
-            message.guild.channels.create(lobby_name, {
-                type: 'voice',
-                parent: cat,
-                permissionOverwrites: [
-                    {
-                        id: message.guild.id,
-                        allow: ['VIEW_CHANNEL'],
-                    }]
-            })
         })
+        const lobby = await message.guild.channels.create(lobby_name, {
+            type: 'voice',
+            parent: cat,
+            permissionOverwrites: [
+                {
+                    id: message.guild.id,
+                    allow: ['VIEW_CHANNEL'],
+                }]
+        })
+        ids.category = cat.id;
+        ids.lobby = lobby.id;
+        ids.initiated = true;
     },
 };
