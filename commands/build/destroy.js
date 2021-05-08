@@ -14,14 +14,14 @@ module.exports = {
         }
 
         for (const id in ids.shuffle_ids) {
-            const channel = message.guild.channels.cache.get(id);
+            const channel = await message.guild.channels.cache.get(id);
             await channel.delete();
         }
 
-        const lobby = message.guild.channels.cache.get(ids.lobby);
+        const lobby = await message.guild.channels.cache.get(ids.lobby);
         await lobby.delete();
 
-        const category = message.guild.channels.cache.get(ids.category);
+        const category = await message.guild.channels.cache.get(ids.category);
         await category.delete();
 
         ids.initiated = false;

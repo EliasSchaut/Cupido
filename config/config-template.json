@@ -3,5 +3,9 @@
   "token": "YOUR_TOKEN",
   "commands_path": "./commands",
   "lang": "en",
-  "admin_ids": [ ]
+  "admin_ids": [ ],
+  "init": {
+    "category_name": "Shuffle",
+    "lobby_name": "Lobby"
+  }
 }
