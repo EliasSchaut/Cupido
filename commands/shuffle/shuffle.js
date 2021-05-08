@@ -52,7 +52,6 @@ module.exports = {
 
         // shuffle members
         members = members.sort(() => Math.random() - 0.5);
-        console.log(members)
 
         // move members
         const channels = await message.guild.channels.cache;
