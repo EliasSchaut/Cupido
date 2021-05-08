@@ -10,21 +10,20 @@ module.exports = {
     restricted: true,
     async execute(message, args) {
         if (!ids.initiated) {
-            return message.channels
+            return message.channel.send("Channels are not initialised. There is nothing to delete!")
         }
 
-        for (const id in ids.shuffle_ids) {
-            const channel = await message.guild.channels.cache.get(id);
-            await channel.delete();
+        for (let i = 0; i < ids.shuffle_ids.length; i++) {
+            await message.guild.channels.cache.get(ids.shuffle_ids[i]).delete();
         }
 
         const lobby = await message.guild.channels.cache.get(ids.lobby);
-        await lobby.delete();
-
         const category = await message.guild.channels.cache.get(ids.category);
+        await lobby.delete();
         await category.delete();
 
         ids.initiated = false;
-        message.channel.send("Channels successfully destroyed")
+        ids.shuffle_ids = [];
+        message.channel.send("Channels successfully destroyed!")
     },
 };

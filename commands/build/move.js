@@ -13,19 +13,19 @@ module.exports = {
         const to_channel = await message.guild.channels.cache.get(args[1]);
 
         // check existence
-        if ((from_channel === "undefined") || (to_channel !== "undefined")) {
-            return message.channel.send("The specified IDs must be from existing voice channels!")
+        if ((from_channel === "undefined") || (to_channel === "undefined")) {
+            return message.channel.send("The specified IDs must be from existing voice channels!");
         }
 
         // check
         if ((from_channel.type !== "voice") || (to_channel.type !== "voice")) {
-            return message.channel.send("The specified IDs must be from voice channels!")
+            return message.channel.send("The specified IDs must be from voice channels!");
         }
 
         // move
         for (const member of from_channel.members) {
-            await member[1].voice.setChannel(to_channel)
+            await member[1].voice.setChannel(to_channel);
         }
-        message.channel.send("All members moved!")
+        message.channel.send("All members moved!");
     },
 };
