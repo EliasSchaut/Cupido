@@ -65,7 +65,7 @@ client.on('message', message => {
     }
 
     // check missing args
-    if (command.args && (args.length <= command.args_min_length)) {
+    if (command.args && (args.length < command.args_min_length)) {
         let reply = text.missing_args + `, ${message.author}!`;
 
         if (command.usage) {
