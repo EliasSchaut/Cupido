@@ -3,7 +3,7 @@ let ids = require("../../js/id_safe").ids;
 
 module.exports = {
     name: 'init',
-    description: 'Create a new lobby',
+    description: 'Create a new category with a new lobby',
     aliases: ['create', 'i', 'make', 'build'],
     args: false,
     guildOnly: true,
