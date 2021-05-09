@@ -7,6 +7,7 @@ module.exports = {
     args: false,
     guildOnly: false,
     dmOnly: false,
+    restricted: false,
     execute(message, args) {
         const data = [];
         const { commands } = message.client;

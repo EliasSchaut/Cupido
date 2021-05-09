@@ -28,8 +28,7 @@ for (const folder of commandFolders) {
 // Event-Handler
 // ---------------------------------
 
-// when the client is ready, run this code
-// this event will only trigger one time after logging in
+// when the client is ready
 client.once('ready', () => {
     console.log('Ready!');
 });

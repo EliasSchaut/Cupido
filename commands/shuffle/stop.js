@@ -23,6 +23,6 @@ module.exports = {
         }
 
         ids.shuffle_ids = [];
-        message.channel.send("Channels successfully destroyed!")
+        message.channel.send("shuffle successfully stoped!")
     },
 };

@@ -5,6 +5,7 @@ module.exports = {
     args: false,
     guildOnly: false,
     dmOnly: false,
+    restricted: false,
     execute(message, args) {
         message.channel.send(`Websocket heartbeat: ${message.mentions.client.ws.ping}ms.`);
     },

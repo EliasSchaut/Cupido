@@ -7,6 +7,7 @@ module.exports = {
     args_min_length: 1,
     guildOnly: false,
     dmOnly: false,
+    restricted: false,
     execute(message, args) {
         message.channel.send(`${args}`);
     },
