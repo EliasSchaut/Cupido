@@ -8,5 +8,9 @@ module.exports = {
     restricted: false,
     execute(message, args) {
         message.channel.send(`Websocket heartbeat: ${message.mentions.client.ws.ping}ms.`);
+
+        message.channel.send('Pinging...').then(send => {
+            send.edit(`Roundtrip latency: ${send.createdTimestamp - message.createdTimestamp}ms`);
+        });
     },
 };
