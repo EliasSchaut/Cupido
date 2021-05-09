@@ -3,7 +3,7 @@ const shuffle = require("./shuffle")
 
 module.exports = {
     name: 'auto_shuffle',
-    description: 'Loop a shuffle',
+    description: 'Iterates shuffle and stop. The number of iterations, as well as the duration of an iteration will passed as argument.',
     aliases: ['loop', 'shuffle_loop', 'repeat', 'auto'],
     args: true,
     usage: '[# iterations] [iteration time in minutes] [# user per voice channel]',

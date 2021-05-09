@@ -2,7 +2,7 @@ let ids = require("../../js/id_safe").ids
 
 module.exports = {
     name: 'destroy',
-    description: 'Destruct all channels',
+    description: 'Delete all created channels (this includes also lobby and the category).',
     aliases: ['kill', 'destruction', 'genocide'],
     args: false,
     guildOnly: true,

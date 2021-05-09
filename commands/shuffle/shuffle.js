@@ -3,7 +3,7 @@ let ids = require("../../js/id_safe").ids;
 
 module.exports = {
     name: 'shuffle',
-    description: 'Start a shuffle',
+    description: 'Creates new voice channels and randomly allocates users from the channel lobby to the new voice channels. The number of users per voice channel will passed as argument.',
     aliases: ['start', 'run'],
     args: true,
     usage: '[# user per voice channel]',

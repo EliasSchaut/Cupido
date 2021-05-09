@@ -2,7 +2,7 @@ let ids = require("../../js/id_safe").ids
 
 module.exports = {
     name: 'stop',
-    description: 'Move everyone back to lobby',
+    description: 'Move every user back from the new voice channels to lobby and delete the new voice channels (except lobby and the category).',
     aliases: ['quit', 'exit', 'abort', 'back', 'return'],
     args: false,
     guildOnly: true,

@@ -1,6 +1,6 @@
 module.exports = {
     name: 'move',
-    description: 'Move members from one channel to another',
+    description: 'Move members from one channel to another.',
     aliases: ['transfer', 'shift', 'relocate'],
     args: true,
     args_min_length: 2,
