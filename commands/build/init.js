@@ -12,7 +12,7 @@ module.exports = {
     async execute(message, args) {
         const cat = await message.guild.channels.create(category_name, {
             type: 'category',
-            position: 1,
+            position: 0,
             permissionOverwrites: [
                 {
                     id: message.guild.id,
@@ -26,6 +26,7 @@ module.exports = {
                 {
                     id: message.guild.id,
                     allow: ['VIEW_CHANNEL'],
+                    deny: ['STREAM']
                 }]
         })
         ids.category = cat.id;

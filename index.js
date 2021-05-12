@@ -60,7 +60,6 @@ client.on('message', message => {
         if (!config.admin_ids.includes(message.author.id)) {
             return message.reply(text.restricted);
         }
-
     }
 
     // check missing args
