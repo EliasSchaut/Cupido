@@ -24,7 +24,11 @@ module.exports = {
 
         // move
         for (const member of from_channel.members) {
-            await member[1].voice.setChannel(to_channel);
+            try {
+                await member[1].voice.setChannel(to_channel);
+            } catch (e) {
+                console.log(`Member could not moved a shuffle channel`)
+            }
         }
         message.channel.send("All members moved!");
     },

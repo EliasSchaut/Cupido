@@ -58,14 +58,27 @@ module.exports = {
         for (let i = 0; i < needed_channels; i++) {
             for (let j = 0; j < members_per_channel; j++) {
                 const member = members.first();
-                await member.voice.setChannel(channels.get(ids.shuffle_ids[i]));
+
+                // avoid moving a left user
+                try {
+                    await member.voice.setChannel(channels.get(ids.shuffle_ids[i]));
+                } catch (e) {
+                    console.log(`Member could not moved a shuffle channel`)
+                }
+
                 members.delete(member.id);
             }
 
             if (i === (needed_channels - 1)) {
                 for (let j = 0; j < rest; j++) {
-                    const member = members.first();
-                    await member.voice.setChannel(channels.get(ids.shuffle_ids[i]));
+                    const member = members.first()
+
+                    // avoid moving a left user
+                    try {
+                        await member.voice.setChannel(channels.get(ids.shuffle_ids[i]));
+                    } catch (e) {
+                        console.log(`Member could not moved to a shuffle channel`)
+                    }
                     members.delete(member.id);
                 }
             }

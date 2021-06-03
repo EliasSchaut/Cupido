@@ -17,12 +17,18 @@ module.exports = {
             const channel = await message.guild.channels.cache.get(ids.shuffle_ids[i]);
 
             for (const member of channel.members) {
-                await member[1].voice.setChannel(ids.lobby);
+
+                // avoid moving a left user
+                try {
+                    await member[1].voice.setChannel(ids.lobby);
+                } catch (e) {
+                    console.log(`Member ${member.user.username} could not moved to lobby`)
+                }
             }
             await channel.delete();
         }
 
         ids.shuffle_ids = [];
-        message.channel.send("shuffle successfully stoped!")
+        message.channel.send("shuffle successfully stopped!")
     },
 };

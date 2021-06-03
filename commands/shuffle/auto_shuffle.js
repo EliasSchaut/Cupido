@@ -13,7 +13,7 @@ module.exports = {
     restricted: true,
     async execute(message, args) {
         if (isNaN(args[0]) || isNaN(args[1]) || isNaN(args[2])) {
-            return message.channel.send("All your argument must be a number!")
+            return message.channel.send("All your arguments must be numbers!")
         }
 
         const iterations = parseInt(args[0])
