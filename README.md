@@ -26,7 +26,7 @@ This bot can run the following commands (and more):
    * your bot's prefix
    * your bot's token
    * your admin id's: Enter a discord user id in quotation marks and separate several with a comma ```[ "<id>", "<id>", ..., "<id>"]```.\
-     These are the only users who have the permission to execute the commands of this bot.
+     These are the only users who have the permission to execute the restricted commands of this bot.
 3. Run ```npm install```.
 
 ## Run
